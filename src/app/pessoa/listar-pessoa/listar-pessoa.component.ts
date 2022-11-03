@@ -10,12 +10,12 @@ import { PessoaService } from '../services/pessoa.service';
 })
 export class ListarPessoaComponent implements OnInit {
   pessoas : Pessoa [] = [];
-  constructor(private pessoaService: PessoaService) { }
+  constructor(private pessoaService: PessoaService) { } 
 
 
   ngOnInit(): void {
     this.pessoas = this.listarTodos();
-  }
+  } 
  
   listarTodos(): Pessoa [] {
     return this.pessoaService.listarTodos();
