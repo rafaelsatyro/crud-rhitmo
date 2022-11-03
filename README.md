@@ -1,5 +1,5 @@
 # Crud Rhitmo - Desafio de Processo Seletivo.
-Este sistema CRUD, foi criado para o desafio do processo seletivo da empresa Rhitmo Tech, e foi realizado majoritariamente com Angular.
+Este sistema CRUD, foi criado para o desafio do processo seletivo da empresa Rhitmo Tech, e foi realizado majoritariamente com Angular e Typescript.
 
 # Informações Básicas:
 Neste CRUD básico, você irá conseguir salvar informações de uma pessoa em seu local storage.
