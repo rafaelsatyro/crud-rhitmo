@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./app.component.css">
+</head>
+<body>
+    <div class="container-header">
+        <div class="container-content-1">
+            <img src="../assets/logo.png" alt="logo" class="img-logo" >
+         </div>
+         <div class="container-content-2">
+            <a [routerLink] = "['/pessoas/listar']"><button class="button-listar">Listar</button></a>
+            <img src="../assets/roda.png" alt="">
+            <a [routerLink] = "['/pessoas/novo']"><button class="button-cadastrar">Cadastrar</button></a>
+         </div>
+    </div>
+    <router-outlet></router-outlet>
+</body>
+<div class="container-footer">
+    <div class="container-footer-content">
+        <p class="name-footer">Rafael Pereira Satyro - 2022</p>
+    </div>
+</div>
+</html>
+
+

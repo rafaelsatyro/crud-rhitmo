@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./inserir-pessoa.component.css">
+</head>
+<body>
+    <div class="container-title">
+        <h1>Cadastro</h1>
+    </div>
+    <div >
+        <a [routerLink] = "['/pessoas']">
+            <button class="button-voltar"> <  </button>
+        </a>
+    </div>
+    <div class="main-container">
+        <form #formPessoa = 'ngForm'>
+            <div class="container-input-name">
+                <p class="p-nome">Nome</p>
+                <input class="input-name" type="text" id="nome" name="nome" [(ngModel)]="pessoa.nome" #nome="ngModel" placeholder="Digite seu nome" minlength="2" maxlength="30" required>
+            </div>
+            <div class="container-input-email">
+                <p class="p-email">E-mail</p>
+                <input class="input-email" type="text" id="email" name="email" [(ngModel)]="pessoa.email" #email="ngModel" placeholder="Digite seu melhor e-mail" minlength="2" maxlength="30" required>
+            </div>
+            <div class="container-input-CPF">
+                <p class="p-cpf">CPF</p>
+                <input class="input-cpf" type="text" id="cpf" name="cpf" [(ngModel)]="pessoa.cpf" #nome="ngModel" placeholder="Digite CPF aqui" minlength="2" maxlength="11"required>
+            </div>
+            <div class="container-endereco-1">
+                <div class="container-endereco-2">
+                    <p class="p-endereco">Endereço</p>
+                    <input class="input-endereco" type="text" id="endereco" name="endereco" [(ngModel)]="pessoa.endereco" #nome="ngModel" placeholder="Digite endereço" minlength="2" maxlength="30" required>
+                </div>
+                <div class="container-endereco-2">
+                    <p class="p-estado">Estado</p>
+                    <input class="input-estado" type="text" id="estado" name="estado" [(ngModel)]="pessoa.estado" #nome="ngModel" placeholder="Selecione o Estado" minlength="2" maxlength="2" required>
+                </div>
+            </div>
+            <div class="container-endereco-1">
+                <div class="container-endereco-2">
+                    <p class="p-cep">CEP</p>
+                    <input class="input-cep" type="text" id="cep" name="cep" [(ngModel)]="pessoa.cep" #nome="ngModel" placeholder="00.000-000" minlength="2"  maxlength="8" required>
+                </div>
+                <div class="container-endereco-2">
+                    <p class="p-cidade">Cidade</p>
+                    <input class="input-cidade" type="text" id="cidade" name="cidade" [(ngModel)]="pessoa.cidade" #nome="ngModel" placeholder="Selecione a Cidade" minlength="2" maxlength="30"required>
+                </div>
+            </div>
+            <div class="container-matricula-button">
+                <button class="button-matricula" 
+                (click)="inserir()"
+                [disabled]="!formPessoa.form.valid"
+                >
+                REALIZAR MATRÍCULA</button>
+                <p class="p-button">Informações seguras e criptografadas</p>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
